@@ -1,0 +1,18 @@
+def solution(s):
+    lst = list(s)
+    lst_to_ord = []
+    
+    for i in range(len(lst)):
+        lst_to_ord.append(ord(lst[i]))
+        
+    lst_to_ord.sort(reverse =True)
+    
+    for i in range(len(lst_to_ord)):
+        lst_to_ord[i] = chr(lst_to_ord[i])    
+    
+    result = ""
+    
+    for i in range(len(lst_to_ord)):
+        result = result + lst_to_ord[i]
+        
+    return result
